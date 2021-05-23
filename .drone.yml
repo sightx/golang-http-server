@@ -4,8 +4,8 @@ kind: pipeline
 type: docker
 os: linux
 
-platform:
-  arch: arm64
+#platform:
+#  arch: arm64
 
 steps:
 - name: build
