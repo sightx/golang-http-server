@@ -1,4 +1,13 @@
-pipeline:
+name: default
+
+kind: pipeline
+type: docker
+os: linux
+
+platform:
+  arch: arm64
+
+steps:
   build:
     image: plugins/docker
     repo: docker-http-server
