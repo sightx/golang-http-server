@@ -11,18 +11,19 @@ steps:
 - name: greeting
   image: alpine
   commands:
-  - echo hello
-  - echo world
-  - touch /tmp/test
   - pwd
-  - ls -lrt 
   - date
   - sleep 5s
   - hostname
   - echo $HOME
 
+- name: submodules
+  image: alpine/git
+  commands:
+  - git submodule update --recursive --remote
+
 - name: build
-  image: plugins/ecr:linux-arm64
+  image: ubuntu
   settings:
      repo: docker-http-server
      create_repository: true
