@@ -34,5 +34,3 @@ steps:
      region: eu-west-1
   tags: 
     - 1.0.0
-    - 1.0
-    - latest
