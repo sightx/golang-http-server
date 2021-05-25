@@ -22,7 +22,7 @@ steps:
   - echo $HOME
 
 - name: build
-  image: plugins/ecr
+  image: plugins/ecr:linux-arm64
   settings:
      repo: docker-http-server
      create_repository: true
