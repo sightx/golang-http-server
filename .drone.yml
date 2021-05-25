@@ -8,6 +8,19 @@ platform:
   arch: arm64
 
 steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+  - touch /tmp/test
+  - pwd
+  - ls -lrt 
+  - date
+  - sleep 5m
+  - hostname
+  - echo $HOME
+
 - name: build
   image: plugins/ecr
   settings:
