@@ -17,7 +17,7 @@ steps:
   - pwd
   - ls -lrt 
   - date
-  - sleep 5m
+  - sleep 5s
   - hostname
   - echo $HOME
 
