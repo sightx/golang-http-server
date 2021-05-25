@@ -31,6 +31,7 @@ steps:
        from_secret: ecr-sx-aws_access_key_id
      secret_key:
        from_secret: ecr-sx-aws_secret_access_key
+     region: eu-west-1
   tags: 
     - 1.0.0
     - 1.0
