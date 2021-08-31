@@ -35,3 +35,7 @@ steps:
      region: eu-west-1
   tags: 
     - 1.0.0
+
+node:
+  cloud: yes
+  arch: arm64
