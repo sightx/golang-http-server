@@ -45,6 +45,6 @@ steps:
   when:
     status: [ success, failure ]
 
-#node:
-#  cloud: yes
-#  arch: arm64
+node:
+  cloud: yes
+  arch: arm64
