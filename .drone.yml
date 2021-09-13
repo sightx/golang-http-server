@@ -46,7 +46,7 @@ steps:
     status: [ success, failure ]
 
 - name: notify
-  image: drillster/drone-email
+  image: igal/drone-email
   settings:
     from: cicd@sightx.ai
     host: smtp.gmail.com
