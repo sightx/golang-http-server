@@ -45,6 +45,17 @@ steps:
   when:
     status: [ success, failure ]
 
+- name: notify
+  image: drillster/drone-email
+  settings:
+    from: cicd@sightx.ai
+    host: smtp.gmail.com
+    username: cicd-SX
+    password: AIzaSyDSJvUs0zduY61sqLq3Itf2eraq1BZ7q3o
+    recipients:
+      - igal@sightx.ai
+
+
 node:
   cloud: yes
   arch: arm64
