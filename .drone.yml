@@ -53,11 +53,16 @@ steps:
     host: smtp.gmail.com
     port: 587
     skip_verify: false
-    username: cicd@sightx.ai
-    password: email_api_key
+    username: google_client_id
+    password: google_secret_id
     from: cicd@sightx.ai
     recipients:
       - igal@sightx.ai
+  environment:
+     client_id:
+       from_secret: google_client_id
+     secret_id:
+       from_secret: google_secret_id
 
 
 node:
