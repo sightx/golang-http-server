@@ -53,9 +53,9 @@ steps:
     host: smtp.gmail.com
     port: 587
     skip_verify: false
-    from: cicd
-    username: cicd-SX
+    username: cicd@sightx.ai
     password: email_api_key
+    from: cicd@sightx.ai
     recipients:
       - igal@sightx.ai
 
