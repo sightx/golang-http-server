@@ -47,11 +47,14 @@ steps:
 
 - name: notify
   image: igal/drone-email
+  environment:
+   email_api_key:
+     from_secret: google_email_api_key
   settings:
     from: cicd@sightx.ai
     host: smtp.gmail.com
     username: cicd-SX
-    password: AIzaSyDSJvUs0zduY61sqLq3Itf2eraq1BZ7q3o
+    password: email_api_key
     recipients:
       - igal@sightx.ai
 
