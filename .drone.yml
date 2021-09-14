@@ -52,7 +52,7 @@ steps:
   settings:
     host: smtp.gmail.com
     port: 587
-    skip_verify: false
+    skip_verify: true
     username: google_client_id
     password: google_secret_id
     from: cicd@sightx.ai
