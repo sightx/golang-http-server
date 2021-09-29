@@ -52,11 +52,11 @@ steps:
   settings:
     host: smtp.gmail.com
     from: cicd@sightx.ai
-    port: 465
-    skip_verify: false
-    secrets: [ google_app_password ]
+    port: 587
+    skip_verify: true
+#   secrets: [ google_app_password ]
     username: cicd@sightx.ai
-    password: google_app_password
+    password: vrfjziqpirlsxfbo
     recipients:
       - igal@sightx.ai
 
