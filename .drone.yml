@@ -46,24 +46,19 @@ steps:
 
 - name: notify
   image: igal/drone-email
-  environment:
-   email_api_key:
-     from_secret: google_email_api_key
+# environment:
+#  email_api_key:
+#    from_secret: google_email_api_key
   settings:
     host: smtp.gmail.com
     from: cicd@sightx.ai
     port: 587
-    skip_verify: false
-    secrets: [ google_client_id, google_secret_id ] 
-#   username: google_client_id
-#   password: google_secret_id
+    skip_verify: true
+    secrets: [ google_app_password ]
+    username: cicd@sightx.ai
+    password: google_app_password
     recipients:
       - igal@sightx.ai
-  environment:
-     client_id:
-       from_secret: google_client_id
-     secret_id:
-       from_secret: google_secret_id
 
 
 node:
