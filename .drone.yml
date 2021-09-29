@@ -60,11 +60,12 @@ steps:
     recipients:
       - igal@sightx.ai
     subject: >
-      [{{ build.status }}]
-      Hi test {{ repo.owner }}/{{ repo.name }} {{ repo.fullName }}
-      ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
-    body:
-      https://git.io/vgvPz
+      [{{ build.status }}] {{ build.link }}
+#     [{{ build.status }}]
+#     Hi test {{ repo.owner }}/{{ repo.name }} {{ repo.fullName }}
+#     ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
+#   body:
+#     https://git.io/vgvPz
 
 node:
   cloud: yes
