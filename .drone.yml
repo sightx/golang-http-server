@@ -59,12 +59,6 @@ steps:
        from_secret: google_app_password
     recipients:
       - igal@sightx.ai
-    subject: >
-        [{{ build.status }}]
-        {{ repo.owner }}/{{ repo.name }}
-        ({{ build.branch }} - {{ truncate build.commit 8 }})
-    body:
-        https://git.io/vgvPz
 
 
 
