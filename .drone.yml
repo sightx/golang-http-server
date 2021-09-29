@@ -5,7 +5,7 @@ type: docker
 os: linux
 
 platform:
-  arch: arm64
+  arch: amd64
 
 steps:
 - name: greeting
@@ -53,7 +53,7 @@ steps:
     host: smtp.gmail.com
     from: cicd@sightx.ai
     port: 587
-    skip_verify: true
+    skip_verify: false
     secrets: [ google_app_password ]
     username: cicd@sightx.ai
     password: google_app_password
