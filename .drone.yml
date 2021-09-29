@@ -65,8 +65,6 @@ steps:
       ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
     body:
       [{{ build.status }}]
-      Hi test {{ repo.owner }}/{{ repo.name }} {{ repo.fullName }}
-      ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
 
 
 
