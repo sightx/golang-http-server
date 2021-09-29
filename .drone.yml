@@ -44,28 +44,20 @@ steps:
 #  when:
 #    status: [ success, failure ]
 
-- name: notify
+- name: email
   image: igal/drone-email
-# environment:
-#  email_api_key:
-#    from_secret: google_email_api_key
   settings:
     host: smtp.gmail.com
-    from: cicd@sightx.ai
+    from: drone-ci@sightx.ai
     port: 587
     skip_verify: true
-    username: cicd@sightx.ai
+    username: 
+       from_secret: google_app_user
     password:
        from_secret: google_app_password
     recipients:
-      - igal@sightx.ai
-    subject: >
-      [{{ build.status }}] {{ build.link }}
-#     [{{ build.status }}]
-#     Hi test {{ repo.owner }}/{{ repo.name }} {{ repo.fullName }}
-#     ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
-#   body:
-#     https://git.io/vgvPz
+#     - software@sightx.ai
+      - devops@sightx.ai
 
 node:
   cloud: yes
