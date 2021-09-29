@@ -54,9 +54,9 @@ steps:
     from: cicd@sightx.ai
     port: 587
     skip_verify: true
-#   secrets: [ google_app_password ]
+    secrets: [ google_app_password ]
     username: cicd@sightx.ai
-    password: vrfjziqpirlsxfbo
+    password: $google_app_password
     recipients:
       - igal@sightx.ai
 
