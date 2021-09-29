@@ -5,7 +5,7 @@ type: docker
 os: linux
 
 platform:
-  arch: amd64
+  arch: arm64
 
 steps:
 - name: greeting
