@@ -48,7 +48,7 @@ steps:
   image: igal/drone-email
   settings:
     host: smtp.gmail.com
-    from: drone-ci@sightx.ai
+    from: cicd@sightx.ai
     port: 587
     skip_verify: true
     username: 
