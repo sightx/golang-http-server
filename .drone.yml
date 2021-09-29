@@ -63,6 +63,9 @@ steps:
       [{{ build.status }}]
       {{ repo.owner }}/{{ repo.name }} {{ repo.fullName }}
       ({{ build.number }} - {{ commit.branch }} {{ truncate commit.SHA 7 }})
+    body:
+      https://git.io/vgvPz
+
 
 node:
   cloud: yes
