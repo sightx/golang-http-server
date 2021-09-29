@@ -56,9 +56,12 @@ steps:
     skip_verify: true
     secrets: [ google_app_password ]
     username: cicd@sightx.ai
-    password: $google_app_password
+    password: google_pass
     recipients:
       - igal@sightx.ai
+  environment:
+     google_pass:
+       from_secret: google_app_password
 
 
 node:
