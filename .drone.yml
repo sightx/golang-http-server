@@ -60,5 +60,5 @@ steps:
       - devops@sightx.ai
 
 node:
-  cloud: yes
+  lab: yes
   arch: arm64
