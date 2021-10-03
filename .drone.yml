@@ -7,9 +7,9 @@ os: linux
 platform:
   arch: arm64
 
-node:
-  lab: yes
-  arch: arm64
+#node:
+#  lab: yes
+#  arch: arm64
 
 steps:
 - name: greeting
