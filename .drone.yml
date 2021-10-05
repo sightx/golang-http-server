@@ -44,11 +44,14 @@ steps:
   image: alpine
   detached: true
   commands:
-  - apk update && apk add minio-client
+  - apk update
+  - wget https://dl.min.io/client/mc/release/linux-arm64/mc
+  - mv mc /usr/local/bin
+  - chmod +x /usr/local/bin/mc
   - sleep 2 
-  - mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
-  - mc config host add minio http://172.12.60.5:9000 $access $secret
-  # mc admin user add minio tester barbarbar
+  - /usr/local/bin/mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
+  - /usr/local/bin/mc config host add minio http://172.12.60.5:9000 $access $secret
+  # /usr/local/bin/mc admin user add minio tester barbarbar
   # echo '{"Version": "2012-10-17", "Statement": [{"Action": ["s3:GetObject", "s3:PutObject", "s3:DeleteObject", "s3:CreateBucket", "s3:DeleteBucket"], "Effect": "Allow", "Resource": ["arn:aws:s3:::testing-artifacts/*", "arn:aws:s3:::testing-artifacts"], "Sid": ""}]}' > /tmp/policy.json 
   # mc admin policy add minio userpolicy /tmp/policy.json
   # mc admin policy set minio userpolicy user=tester
