@@ -45,7 +45,7 @@ steps:
   - ! 
     mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
     mc ls minio/
-    mv cp --recursive minio/testing-artifacts/ .
+    mc cp --recursive minio/testing-artifacts/ .
   settings:
      url: 
        from_secret: minio_url
