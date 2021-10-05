@@ -39,6 +39,11 @@ steps:
   tags: 
     - 1.0.0
 
+- name: build
+  image: minio/mc
+  commands: 
+  - mc help
+  - mc ls
 #- name: slack
 #  image: plugins/slack
 #  settings:
@@ -61,4 +66,4 @@ steps:
        from_secret: google_app_password
     recipients:
 #     - software@sightx.ai
-      - devops@sightx.ai
+      - igal@sightx.ai
