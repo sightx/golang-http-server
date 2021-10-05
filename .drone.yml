@@ -40,9 +40,11 @@ steps:
     - 1.0.0
 
 - name: minio
-  image: minio/mc
+ #image: minio/mc
+  image: alpine
   detached: true
   commands:
+  - apk update && apk add minio-client
   - sleep 2 
   - mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
   - mc config host add minio http://172.12.60.5:9000 $access $secret
