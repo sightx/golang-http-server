@@ -50,13 +50,13 @@ steps:
 #   mc admin policy set minio userpolicy user=tester
 #   mc ls minio/
 #   mc cp --recursive minio/testing-artifacts/ .
-# settings:
-#    url: 
-#      from_secret: minio_url
-#    access:
-#      from_secret: minio_accessKey
-#    secret:
-#      from_secret: minio_secretKey
+  settings:
+     url: 
+       from_secret: minio_url
+     access:
+       from_secret: minio_accessKey
+     secret:
+       from_secret: minio_secretKey
 
  #- name: slack
 #  image: plugins/slack
