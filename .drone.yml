@@ -42,7 +42,7 @@ steps:
 - name: minio
   image: minio/mc
   commands: 
-  - mc alias set minio $url $access $secret
+  - mc alias set minio $url $access $secret --api S3v4
   - mc --help
   - mc ls minio
   settings:
