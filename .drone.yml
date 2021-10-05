@@ -41,6 +41,7 @@ steps:
 
 - name: minio
   image: minio/mc
+  detached: true
   commands:
   - sleep 2 
   - mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
