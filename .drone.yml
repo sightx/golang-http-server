@@ -42,7 +42,7 @@ steps:
 - name: minio
   image: minio/mc
   commands: 
-  - mc help
+  - mc --help
   - mc ls
 #- name: slack
 #  image: plugins/slack
