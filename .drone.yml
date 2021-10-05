@@ -42,9 +42,17 @@ steps:
 - name: minio
   image: minio/mc
   commands: 
+  - mc alias set minio $url $access $secret
   - mc --help
-  - mc ls
-#- name: slack
+  - mc ls minio
+  settings:
+     url: 
+       from_secret: minio_url
+     access:
+       from_secret: minio_accessKey
+     secret:
+       from_secret: minio_secretKey
+ #- name: slack
 #  image: plugins/slack
 #  settings:
 #    webhook:
