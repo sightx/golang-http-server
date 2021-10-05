@@ -39,7 +39,7 @@ steps:
   tags: 
     - 1.0.0
 
-- name: build
+- name: minio
   image: minio/mc
   commands: 
   - mc help
