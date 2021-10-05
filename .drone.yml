@@ -43,8 +43,7 @@ steps:
   image: minio/mc
   commands: 
   - mc alias set minio http://172.12.60.5:9000 $access $secret --api S3v4
-  - mc --help
-  - mc ls minio
+  - mc ls minio/
   settings:
      url: 
        from_secret: minio_url
